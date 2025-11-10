@@ -6,8 +6,26 @@
     <title>Outbound — Chat</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <style>
+      .home-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 0.35rem 0.9rem;
+        border: 1px solid var(--border, #e2e8f0);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.95);
+        color: inherit;
+        text-decoration: none;
+        font-size: 1rem;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+      }
+    </style>
   </head>
   <body>
+    <a href="index.html" class="home-button" aria-label="Back to home">← Home</a>
     <main>
       <!-- Top heading -->
       <section class="hero" id="chat-hero" style="min-height:auto;padding:2rem 1.25rem 1rem;">
