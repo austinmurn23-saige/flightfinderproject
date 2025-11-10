@@ -1,0 +1,124 @@
+/* Minimal fallback styles for itinerary carousel (no Tailwind) */
+.itinerary-root {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 72rem; /* ~max-w-3xl to 4xl feel with peeks */
+  margin: 0 auto;
+}
+.itinerary-viewport {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 260px;
+}
+.itinerary-cards {
+  position: relative;
+  height: 100%;
+  padding: 0.5rem;
+}
+.card {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: min(56rem, calc(100% - 4rem));
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: var(--radius, 14px);
+  box-shadow: var(--shadow-lg, 0 10px 24px rgba(2,6,23,.12));
+  padding: 1.25rem 1.25rem;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+.card-header { margin-bottom: .5rem; }
+.badge {
+  display:inline-block;
+  padding:.25rem .5rem;
+  border:1px solid var(--border, #e2e8f0);
+  border-radius:999px;
+  background:#f8fafc;
+  color:#0f172a;
+  font-size:.8rem;
+}
+.card-title {
+  font-size: clamp(1.25rem, 1.2vw + 1rem, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: .25rem;
+}
+.card-subtitle { color: var(--muted, #475569); margin-bottom: .5rem; }
+.card-list { list-style: disc; padding-left: 1.25rem; }
+.card-actions { margin-top: .75rem; }
+
+/* Positions for lazy-susan peeks */
+.card--current {
+  z-index: 3;
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+.card--prev {
+  z-index: 2;
+  transform: translate(calc(-50% - 38%), 0) scale(.9);
+  opacity: .6;
+}
+.card--next {
+  z-index: 2;
+  transform: translate(calc(-50% + 38%), 0) scale(.9);
+  opacity: .6;
+}
+
+/* Buttons resembling shadcn default */
+.btn-default {
+  background: #fff;
+  color: var(--text, #0f172a);
+  border: 1px solid var(--border, #e2e8f0);
+}
+.btn-default:hover {
+  background: #f8fafc;
+}
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: var(--radius, 14px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itinerary-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: .75rem;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #cbd5e1; /* slate-300 */
+  border: 1px solid var(--border, #e2e8f0);
+  transition: transform 200ms ease, background-color 200ms ease;
+}
+.dot:hover { transform: scale(1.15); }
+.dot.active {
+  background: var(--primary, #2563eb);
+  transform: scale(1.25);
+}
+
+@media (max-width: 700px) {
+  .itinerary-root {
+    flex-direction: column;
+  }
+  .itinerary-viewport {
+    width: 100%;
+  }
+  .card {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) scale(1) !important;
+    opacity: 1 !important;
+  }
+}
+
