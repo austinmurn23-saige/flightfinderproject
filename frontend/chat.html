@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Outbound — Chat</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Top heading -->
+      <section class="hero" id="chat-hero" style="min-height:auto;padding:2rem 1.25rem 1rem;">
+        <div class="hero-inner" style="padding:0;">
+          <h1>Describe your trip</h1>
+          <p class="tagline">We’ll find what you need.</p>
+        </div>
+      </section>
+
+      <!-- Middle: single chat input box -->
+      <section class="planner" aria-label="Chat input" style="padding-top:1rem;padding-bottom:1rem;">
+        <div class="planner-inner">
+          <form class="chat-single" action="#" method="post" style="display:flex;flex-direction:column;">
+            <textarea class="input" name="message" placeholder="Start typing here..." aria-label="Message" rows="12" style="min-height:300px;resize:vertical;"></textarea>
+          </form>
+        </div>
+      </section>
+
+      <!-- Bottom: Shadcn-like card with pill badges -->
+      <section class="planner" aria-label="Recommended details" style="padding-top:0;">
+        <div class="planner-inner">
+          <div class="card" style="padding:1rem;">
+            <h2 style="font-size:1.125rem;margin-bottom:.5rem;">Recommended Details</h2>
+            <div class="badges" style="display:flex;flex-wrap:wrap;gap:.5rem;">
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Destination(s)</span>
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Departure & Return Dates</span>
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Traveler Type</span>
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Class Preference</span>
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Budget Range</span>
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Preferred Flight Times</span>
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Loyalty Programs/Miles</span>
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Accommodation Type</span>
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Trip Focus</span>
+              <span class="badge" style="display:inline-block;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:#0f172a;font-size:.9rem;">Special Considerations</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>
