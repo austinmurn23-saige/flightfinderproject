@@ -1,0 +1,29 @@
+{
+  "name": "flighttracker",
+  "version": "1.0.0",
+  "description": "- Next.js (React + TypeScript) - Tailwind CSS + ShadCN/UI - React Query - Framer Motion",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinmurn23-saige/flightfinderproject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austinmurn23-saige/flightfinderproject/issues"
+  },
+  "homepage": "https://github.com/austinmurn23-saige/flightfinderproject#readme",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}

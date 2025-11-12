@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Outbound — Build your trip your way.</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main>
-      <section class="hero" id="hero">
-        <div class="hero-inner">
-          <h1>Outbound</h1>
-          <p class="tagline">Build your trip your way.</p>
-          <a href="chat.html" class="btn btn-primary" role="button">Start Planning</a>
-        </div>
-      </section>
-    </main>
-  </body>
-  </html>
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlightTracker – Start Planning</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Your Trip Planner</h1>
+    <form id="flight-form">
+      <label>Origin (IATA):
+        <input type="text" id="origin" placeholder="e.g. JFK" required />
+      </label>
+      <label>Destination (IATA):
+        <input type="text" id="destination" placeholder="e.g. LAX" required />
+      </label>
+      <button type="submit">Search Flights</button>
+    </form>
+  </main>
+  <script>
+    document.getElementById("flight-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const origin = document.getElementById("origin").value.trim().toUpperCase();
+      const destination = document.getElementById("destination").value.trim().toUpperCase();
+      if (!origin || !destination) return alert("Please enter both IATA codes.");
+      // redirect to results page with query params
+      window.location.href = `results.html?origin=${origin}&destination=${destination}`;
+    });
+  </script>
+</body>
+</html>
